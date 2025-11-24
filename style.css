@@ -34,6 +34,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
 }
 
 .search input{
@@ -44,6 +45,7 @@ body{
     height: 60px;
     padding: 10px 25px;
     flex: 1;
+    min-width: 0;
     font-size: 18px;
     border-radius: 30px;
     margin-right: 16px;
@@ -62,6 +64,25 @@ body{
     width: 60px;
     height: 60px;
     background: #ebfffc;
+}
+
+/* Responsive tweaks for small viewports to prevent overflow */
+@media (max-width: 375px) {
+    .card{
+        padding: 24px 18px;
+    }
+
+    .search input{
+        height: 48px;
+        padding: 8px 14px;
+        font-size: 16px;
+        margin-right: 0; /* gap handles spacing now */
+    }
+
+    .search button{
+        width: 48px;
+        height: 48px;
+    }
 }
 
 .search button svg{
