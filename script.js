@@ -18,11 +18,11 @@ async function checkWeather(city) {
 
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
-    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + " %";
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
     if (data.weather[0].main == "Clouds") {
-        document.querySelector(".weather-icon").src = "images/clear.png";
+        document.querySelector(".weather-icon").src = "images/clouds.png";
     }
     else if (data.weather[0].main == "Clear") {
         document.querySelector(".weather-icon").src = "images/clear.png";
